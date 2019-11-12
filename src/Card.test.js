@@ -2,7 +2,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Card from './Card';
-// import STORE from './STORE';
 import renderer from 'react-test-renderer';
 
 it('renders without crashing', () =>{
@@ -11,9 +10,8 @@ it('renders without crashing', () =>{
   ReactDOM.unmountComponentAtNode(div);
 });
 
+
 it('renders the UI as expected', () => {
-  const tree = renderer
-    .create(<Card title="Card 1" content="Hey look at me, I'm some content"/>)
-    .toJSON();
+  const tree = renderer.create(<Card name="Card" title="card 1" content="some content"/>).toJSON();
   expect(tree).toMatchSnapshot();  
   });
