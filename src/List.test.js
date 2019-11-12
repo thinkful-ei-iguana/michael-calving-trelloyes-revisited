@@ -14,7 +14,7 @@ it('renders without crashing', () =>{
 
 it('renders the UI as expected', () => {
   const tree = renderer
-    .create(<List />)
+    .create(<List name="List" header="Header" cards={[{id: 1, title: 'card 1', content: 'look heres some content'}]}/>)
     .toJSON();
   expect(tree).toMatchSnapshot();  
   });
